@@ -5,11 +5,11 @@ class Operations{
 
 	public:
 
-	Operations();
+	Operations() {}
 
-	double numeric_product(double, double);
+	double numeric_product(double x, double y) { return x * y; }
 };
 
-//#include "model_inc.hpp"
+// #include "model_imp.hpp"
 
 #endif  // SRC_HDP_HPP
