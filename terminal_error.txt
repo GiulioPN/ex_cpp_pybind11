@@ -1,0 +1,273 @@
+(base) MBP-di-Giulio-2:Ex_cpp_pybind11 giuliopn$ make
+c++ -shared -std=c++1y -Wall -O3 ` python3 -m pybind11 --includes` \
+		python_exports.cpp -o operations` python3-config --extension-suffix` \
+		src/model.o
+Undefined symbols for architecture x86_64:
+  "_PyBaseObject_Type", referenced from:
+      pybind11::detail::make_object_base_type(_typeobject*) in python_exports-d9dac0.o
+  "_PyBytes_AsString", referenced from:
+      pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+      bool pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load_bytes<char>(std::__1::enable_if<std::is_same<char, char>::value, pybind11::handle>::type) in python_exports-d9dac0.o
+  "_PyBytes_AsStringAndSize", referenced from:
+      pybind11::str::operator std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >() const in python_exports-d9dac0.o
+  "_PyBytes_Size", referenced from:
+      pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+      bool pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load_bytes<char>(std::__1::enable_if<std::is_same<char, char>::value, pybind11::handle>::type) in python_exports-d9dac0.o
+  "_PyCFunction_NewEx", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyCFunction_Type", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyCapsule_GetContext", referenced from:
+      pybind11::capsule::capsule(void const*, void (*)(void*))::'lambda'(_object*)::__invoke(_object*) in python_exports-d9dac0.o
+  "_PyCapsule_GetName", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyCapsule_GetPointer", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+      pybind11::capsule::capsule(void const*, void (*)(void*))::'lambda'(_object*)::__invoke(_object*) in python_exports-d9dac0.o
+  "_PyCapsule_New", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      pybind11::capsule::capsule(void const*, void (*)(void*)) in python_exports-d9dac0.o
+  "_PyCapsule_SetContext", referenced from:
+      pybind11::capsule::capsule(void const*, void (*)(void*)) in python_exports-d9dac0.o
+  "_PyCapsule_SetPointer", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyCapsule_Type", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyDict_Copy", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyDict_DelItemString", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyDict_GetItemString", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyDict_New", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyDict_Next", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyDict_Size", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyErr_Clear", referenced from:
+      pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+      pybind11::detail::type_caster<bool, void>& pybind11::detail::load_type<bool, void>(pybind11::detail::type_caster<bool, void>&, pybind11::handle const&) in python_exports-d9dac0.o
+      pybind11::module_& pybind11::module_::def<double (*)(double), char [30]>(char const*, double (*&&)(double), char const (&) [30]) in python_exports-d9dac0.o
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyErr_ExceptionMatches", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyErr_Fetch", referenced from:
+      pybind11::error_already_set::error_already_set() in python_exports-d9dac0.o
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+      pybind11::error_already_set::~error_already_set() in python_exports-d9dac0.o
+  "_PyErr_Format", referenced from:
+      _PyInit_operations in python_exports-d9dac0.o
+      _pybind11_meta_call in python_exports-d9dac0.o
+  "_PyErr_NormalizeException", referenced from:
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+  "_PyErr_Occurred", referenced from:
+      pybind11::module_::create_extension_module(char const*, char const*, PyModuleDef*) in python_exports-d9dac0.o
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyErr_Restore", referenced from:
+      pybind11::detail::translate_local_exception(std::exception_ptr) in python_exports-d9dac0.o
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+      pybind11::error_already_set::~error_already_set() in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyErr_SetString", referenced from:
+      _PyInit_operations in python_exports-d9dac0.o
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+      pybind11::cast_error::set_error() const in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+      _pybind11_object_init in python_exports-d9dac0.o
+  "_PyErr_WarnEx", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyEval_AcquireThread", referenced from:
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+  "_PyEval_GetBuiltins", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyEval_InitThreads", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyEval_SaveThread", referenced from:
+      pybind11::gil_scoped_acquire::~gil_scoped_acquire() in python_exports-d9dac0.o
+  "_PyExc_FutureWarning", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyExc_ImportError", referenced from:
+      _PyInit_operations in python_exports-d9dac0.o
+  "_PyExc_IndexError", referenced from:
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+  "_PyExc_MemoryError", referenced from:
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+  "_PyExc_OverflowError", referenced from:
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+  "_PyExc_RuntimeError", referenced from:
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+      pybind11::cast_error::set_error() const in python_exports-d9dac0.o
+  "_PyExc_SystemError", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyExc_TypeError", referenced from:
+      _pybind11_meta_call in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+      _pybind11_object_init in python_exports-d9dac0.o
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyExc_ValueError", referenced from:
+      pybind11::detail::translate_exception(std::exception_ptr) in python_exports-d9dac0.o
+  "_PyException_SetTraceback", referenced from:
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+  "_PyFloat_AsDouble", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyFloat_FromDouble", referenced from:
+      void pybind11::cpp_function::initialize<double (*&)(double), double, double, pybind11::name, pybind11::scope, pybind11::sibling, char [30]>(double (*&)(double), double (*)(double), pybind11::name const&, pybind11::scope const&, pybind11::sibling const&, char const (&) [30])::'lambda'(pybind11::detail::function_call&)::__invoke(pybind11::detail::function_call&) in python_exports-d9dac0.o
+  "_PyFloat_Type", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyFrame_GetLineNumber", referenced from:
+      pybind11::detail::error_string() in python_exports-d9dac0.o
+  "_PyGILState_Ensure", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyGILState_GetThisThreadState", referenced from:
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+  "_PyGILState_Release", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyInstanceMethod_New", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyInstanceMethod_Type", referenced from:
+      _pybind11_meta_getattro in python_exports-d9dac0.o
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+  "_PyMem_Calloc", referenced from:
+      pybind11::detail::instance::allocate_layout() in python_exports-d9dac0.o
+  "_PyMem_Free", referenced from:
+      pybind11::detail::instance::deallocate_layout() in python_exports-d9dac0.o
+  "_PyModule_AddObject", referenced from:
+      pybind11::module_::add_object(char const*, pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyModule_Create2", referenced from:
+      pybind11::module_::create_extension_module(char const*, char const*, PyModuleDef*) in python_exports-d9dac0.o
+  "_PyNumber_Check", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyNumber_Float", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyObject_CallObject", referenced from:
+      pybind11::object pybind11::detail::object_api<pybind11::detail::accessor<pybind11::detail::accessor_policies::str_attr> >::operator()<(pybind11::return_value_policy)1, char const* const&>(char const* const&) const in python_exports-d9dac0.o
+      pybind11::object pybind11::detail::object_api<pybind11::detail::accessor<pybind11::detail::accessor_policies::str_attr> >::operator()<(pybind11::return_value_policy)1, pybind11::handle&>(pybind11::handle&) const in python_exports-d9dac0.o
+  "_PyObject_ClearWeakRefs", referenced from:
+      pybind11::detail::clear_instance(_object*) in python_exports-d9dac0.o
+  "_PyObject_GetAttrString", referenced from:
+      pybind11::detail::accessor<pybind11::detail::accessor_policies::str_attr>::get_cache() const in python_exports-d9dac0.o
+      pybind11::module_& pybind11::module_::def<double (*)(double), char [30]>(char const*, double (*&&)(double), char const (&) [30]) in python_exports-d9dac0.o
+  "_PyObject_GetItem", referenced from:
+      pybind11::detail::accessor<pybind11::detail::accessor_policies::generic_item>::get_cache() const in python_exports-d9dac0.o
+  "_PyObject_HasAttrString", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+      pybind11::module_::add_object(char const*, pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyObject_IsInstance", referenced from:
+      _pybind11_meta_setattro in python_exports-d9dac0.o
+  "_PyObject_Repr", referenced from:
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyObject_SetAttrString", referenced from:
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      pybind11::detail::make_default_metaclass() in python_exports-d9dac0.o
+      pybind11::detail::make_object_base_type(_typeobject*) in python_exports-d9dac0.o
+      void pybind11::detail::accessor<pybind11::detail::accessor_policies::str_attr>::operator=<char const (&) [10]>(char const (&) [10]) && in python_exports-d9dac0.o
+  "_PyObject_SetItem", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyObject_Str", referenced from:
+      pybind11::str::str(pybind11::handle) in python_exports-d9dac0.o
+      pybind11::str::str(pybind11::object&&) in python_exports-d9dac0.o
+  "_PyProperty_Type", referenced from:
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      _pybind11_static_get in python_exports-d9dac0.o
+      _pybind11_static_set in python_exports-d9dac0.o
+  "_PyThreadState_Clear", referenced from:
+      pybind11::gil_scoped_acquire::dec_ref() in python_exports-d9dac0.o
+  "_PyThreadState_DeleteCurrent", referenced from:
+      pybind11::gil_scoped_acquire::dec_ref() in python_exports-d9dac0.o
+  "_PyThreadState_Get", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyThreadState_New", referenced from:
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+  "_PyThread_tss_alloc", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyThread_tss_create", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+  "_PyThread_tss_get", referenced from:
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+  "_PyThread_tss_set", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+      pybind11::gil_scoped_acquire::dec_ref() in python_exports-d9dac0.o
+  "_PyTuple_GetItem", referenced from:
+      pybind11::detail::accessor<pybind11::detail::accessor_policies::tuple_item>::get_cache() const in python_exports-d9dac0.o
+  "_PyTuple_New", referenced from:
+      pybind11::tuple pybind11::make_tuple<(pybind11::return_value_policy)1, char const* const&>(char const* const&) in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+      pybind11::tuple pybind11::make_tuple<(pybind11::return_value_policy)1, pybind11::handle&>(pybind11::handle&) in python_exports-d9dac0.o
+  "_PyTuple_SetItem", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyTuple_Size", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyType_IsSubtype", referenced from:
+      pybind11::detail::type_caster<double, void>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyType_Ready", referenced from:
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      pybind11::detail::make_default_metaclass() in python_exports-d9dac0.o
+      pybind11::detail::make_object_base_type(_typeobject*) in python_exports-d9dac0.o
+  "_PyType_Type", referenced from:
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      pybind11::detail::make_default_metaclass() in python_exports-d9dac0.o
+      _pybind11_meta_call in python_exports-d9dac0.o
+      _pybind11_meta_setattro in python_exports-d9dac0.o
+      _pybind11_meta_getattro in python_exports-d9dac0.o
+      _pybind11_meta_dealloc in python_exports-d9dac0.o
+  "_PyUnicode_AsEncodedString", referenced from:
+      pybind11::detail::string_caster<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, false>::load(pybind11::handle, bool) in python_exports-d9dac0.o
+  "_PyUnicode_AsUTF8String", referenced from:
+      pybind11::str::operator std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >() const in python_exports-d9dac0.o
+  "_PyUnicode_DecodeUTF8", referenced from:
+      pybind11::detail::type_caster<char, void>::cast(char const*, pybind11::return_value_policy, pybind11::handle) in python_exports-d9dac0.o
+  "_PyUnicode_FromString", referenced from:
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      pybind11::detail::make_default_metaclass() in python_exports-d9dac0.o
+      pybind11::detail::make_object_base_type(_typeobject*) in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "_PyWeakref_NewRef", referenced from:
+      pybind11::detail::all_type_info_get_cache(_typeobject*) in python_exports-d9dac0.o
+  "_Py_GetVersion", referenced from:
+      _PyInit_operations in python_exports-d9dac0.o
+  "__PyObject_GetDictPtr", referenced from:
+      pybind11::detail::clear_instance(_object*) in python_exports-d9dac0.o
+  "__PyThreadState_UncheckedGet", referenced from:
+      pybind11::gil_scoped_acquire::gil_scoped_acquire() in python_exports-d9dac0.o
+      pybind11::gil_scoped_acquire::dec_ref() in python_exports-d9dac0.o
+  "__PyType_Lookup", referenced from:
+      _pybind11_meta_setattro in python_exports-d9dac0.o
+      _pybind11_meta_getattro in python_exports-d9dac0.o
+  "__Py_Dealloc", referenced from:
+      _PyInit_operations in python_exports-d9dac0.o
+      pybind11::detail::get_internals() in python_exports-d9dac0.o
+      bool pybind11::detail::object_api<pybind11::handle>::contains<char const* const&>(char const* const&) const in python_exports-d9dac0.o
+      pybind11::object::~object() in python_exports-d9dac0.o
+      pybind11::detail::make_static_property_type() in python_exports-d9dac0.o
+      pybind11::detail::make_default_metaclass() in python_exports-d9dac0.o
+      pybind11::detail::make_object_base_type(_typeobject*) in python_exports-d9dac0.o
+      ...
+  "__Py_FalseStruct", referenced from:
+      pybind11::detail::type_caster<bool, void>& pybind11::detail::load_type<bool, void>(pybind11::detail::type_caster<bool, void>&, pybind11::handle const&) in python_exports-d9dac0.o
+  "__Py_NoneStruct", referenced from:
+      pybind11::detail::type_caster<char, void>::cast(char const*, pybind11::return_value_policy, pybind11::handle) in python_exports-d9dac0.o
+      pybind11::detail::type_caster<bool, void>& pybind11::detail::load_type<bool, void>(pybind11::detail::type_caster<bool, void>&, pybind11::handle const&) in python_exports-d9dac0.o
+      pybind11::cpp_function::initialize_generic(pybind11::detail::function_record*, char const*, std::type_info const* const*, unsigned long) in python_exports-d9dac0.o
+      void pybind11::cpp_function::initialize<pybind11::detail::all_type_info_get_cache(_typeobject*)::'lambda'(pybind11::handle), void, pybind11::handle>(pybind11::detail::all_type_info_get_cache(_typeobject*)::'lambda'(pybind11::handle)&&, void (*)(pybind11::handle))::'lambda'(pybind11::detail::function_call&)::__invoke(pybind11::detail::function_call&) in python_exports-d9dac0.o
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+      pybind11::module_& pybind11::module_::def<double (*)(double), char [30]>(char const*, double (*&&)(double), char const (&) [30]) in python_exports-d9dac0.o
+  "__Py_NotImplementedStruct", referenced from:
+      pybind11::cpp_function::dispatcher(_object*, _object*, _object*) in python_exports-d9dac0.o
+  "__Py_TrueStruct", referenced from:
+      pybind11::detail::type_caster<bool, void>& pybind11::detail::load_type<bool, void>(pybind11::detail::type_caster<bool, void>&, pybind11::handle const&) in python_exports-d9dac0.o
+  "Operations::Operations()", referenced from:
+      multiplyByTwo(double) in python_exports-d9dac0.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [generate_pybind] Error 1
